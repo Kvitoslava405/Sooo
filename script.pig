@@ -1,4 +1,4 @@
-data = LOAD 'hdfs://sandbox-hdp.hortonworks.com:8020/uhadoop/bootcamp5.csv' USING PigStorage(';') AS (
+data = LOAD '/home/maria_dev/Sooo/bootcamp5.csv' USING PigStorage(';') AS (
     index:int,
     age:int,
     gender:int,
