@@ -15,7 +15,7 @@ data = LOAD 'hdfs://sandbox-hdp.hortonworks.com:8020/uhadoop/bootcamp5.csv' USIN
 );
 -- Обчислення середньої ваги для тих, хто займається спортом (active=1)
 avg_weight_active = FOREACH (GROUP data BY active) {
-    GENERATE group AS active_status, AVG(avg_weight_active.weight) AS average_weight;
+    GENERATE group AS active_status, AVG(data.weight) AS average_weight;
 };
 
 
